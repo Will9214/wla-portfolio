@@ -6,7 +6,6 @@ const LabelScrambler = () => {
   let interval: ReturnType<typeof setInterval> | null = null;
 
   const fontsArr = ["font-space", "font-shrikhand", "font-sedgwick", "font-pixelfy", "font-orbitron", "font-major-mono", "font-antonio"];
-  console.log(fontsArr.length);
   
   let currentIndex = 1;
     
