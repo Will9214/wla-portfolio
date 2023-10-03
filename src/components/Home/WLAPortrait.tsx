@@ -7,7 +7,7 @@ const WLAPortrait = () => {
   return (
     <DisplayElement>
 
-      <img src={portrait} alt="William" height={300} />
+      <Img src={portrait} alt="William" />
       
     </DisplayElement>
   )
@@ -16,5 +16,22 @@ const WLAPortrait = () => {
 export default WLAPortrait;
 
 const DisplayElement = styled.div`
-  margin-top: 4rem;
+  
+
+  @media(max-width: 700px) {
+    margin: auto;
+    
+  }
+`;
+
+const Img = styled.img`
+  height: 300px;
+
+  @media(max-width: 1095px) {
+    height: 250px;
+  }
+
+  @media(max-width: 700px) {
+    height: 200px;
+  }
 `;

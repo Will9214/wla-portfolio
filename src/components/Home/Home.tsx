@@ -1,12 +1,12 @@
 import Introduction from "./Introduction";
-import Links from "./Links";
+import Projects from "./Projects";
 
 const Home = () => {
 
   return (
     <>
       <Introduction />
-      <Links />
+      <Projects />
     </>
   )
 };

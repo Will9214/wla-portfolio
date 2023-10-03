@@ -13,14 +13,14 @@ const Flashcard = () => {
       
       <MediumTextDiv>a straightforward, easy-to-use flashcard application for studying software engineering terminology and concepts.</MediumTextDiv>
 
-    <Images src={FlashcardImg} alt="homepage-pic" width="65%" />
+    <PCImage1 src={FlashcardImg} alt="homepage-pic" width="65%" />
 
-    <Images src={FlashcardAnswerMobileImg} alt="activity-list-pic" width="25%" />
+    <MobileImage src={FlashcardAnswerMobileImg} alt="activity-list-pic" width="25%" />
     <MediumTextDiv>Responsive web design allows me to easily use the application on mobile devices, meaning I can study wherever I go.</MediumTextDiv>
 
     <MediumTextDiv>Future ideas include expanding topics, disciplines, and allowing the user to choose and filter the cards to only show categories they want to see.</MediumTextDiv>
     
-    <Images src={FlashcardAnswerImg} alt="exercise-search-pis" width="80%" />
+    <PCImage2 src={FlashcardAnswerImg} alt="exercise-search-pis" width="80%" />
     
   </FirstProjectContainer>
  )
@@ -62,6 +62,14 @@ const FlashcardAnchor = styled.a`
   &:hover {
     color: grey;
   }
+
+  @media (max-width: 700px) {
+    font-size: 3.2rem;
+  }
+
+  @media(max-width: 400px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const LargeTextDiv = styled.div`
@@ -71,6 +79,14 @@ const LargeTextDiv = styled.div`
   font-size: 3rem;
   text-align: left;
   font-family: "Roboto";
+
+  @media (max-width: 700px) {
+    font-size: 2.4rem;
+  }
+
+  @media(max-width: 400px) {
+    font-size: 2rem;
+  }
   `;
 
   const MediumTextDiv = styled.div`
@@ -81,15 +97,58 @@ const LargeTextDiv = styled.div`
   font-size: 1.75rem;
   text-align: left;
   padding: 10px 0px;
+
+  @media (max-width: 700px) {
+    font-size: 1.25rem;
+  }
+
+  @media(max-width: 400px) {
+    font-size: 1rem;
+  }
   
   `;
 
-const Images = styled.img`
+const PCImage1 = styled.img`
   border-radius: 10px;
   margin-top: 3%;
   margin-bottom: 3%;
   margin-right: 2.5%;
   border: 6px solid black;
+  width: 65%;
+
+  @media(max-width: 700px) {
+    width: 98%;
+    border: 3px solid black;
+  }
+`;
+
+const PCImage2 = styled.img`
+  border-radius: 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-right: 2.5%;
+  border: 6px solid black;
+  width: 80%;
+
+  @media(max-width: 700px) {
+    width: 98%;
+    border: 3px solid black;
+  }
+
+`;
+
+const MobileImage = styled.img`
+  border-radius: 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-right: 2.5%;
+  border: 6px solid black;
+  width: 25%;
+
+  @media(max-width: 700px) {
+    width: 50%;
+    border: 3px solid black;
+  }
 `;
 
 const LI = styled.li`

@@ -61,17 +61,14 @@
 
 .font-shrikhand {
   font-family: "Shrikhand", cursive;
-  line-height: 38px;
 }
 
 .font-sedgwick {
   font-family: "Sedgwick Ave Display", cursive;
-  line-height: 41px;
 }
 
 .font-pixelfy {
   font-family: "Pixelify Sans", cursive;
-  line-height: 38px;
 }
 
 .font-orbitron {
@@ -80,10 +77,8 @@
 
 .font-major-mono {
   font-family: "Major Mono Display", monospace;
-  line-height: 33px;
 }
 
 .font-antonio {
   font-family: "Antonio", sans-serif;
-  line-height: 32px;
 }

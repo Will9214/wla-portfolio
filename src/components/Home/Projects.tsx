@@ -4,7 +4,7 @@ import LabelScrambler from "../../LabelScrambler";
 import { useNavigate } from "react-router-dom";
 
 
-const Links = () => {
+const Projects = () => {
 
   useEffect(() => {
     LabelScrambler();
@@ -28,19 +28,19 @@ const Links = () => {
 
   return (
     <>
-    <LinksDiv>
+    <ProjectsDiv>
 
-      <Button onClick={handleSeeProjectsClick} className="button-hover font-space" data-value="SEE PROJECTS">
-          SEE PROJECTS
+      <Button onClick={handleSeeProjectsClick} className="button-hover font-space" data-value="P R O J E C T S">
+        P R O J E C T S
       </Button>
 
-      <Button className="button-hover font-space" data-value="ABOUT ME">
+      {/* <Button className="button-hover font-space" data-value="ABOUT ME">
           ABOUT ME
-      </Button>
+      </Button> */}
 
-    </LinksDiv>
+    </ProjectsDiv>
 
-    {showProjectLinks ? (
+    
       <ProjectLinks>
         <ProjectButton onClick={handleFitnessAppClick}>
           <ProjectName>Fit'N'BeGreat</ProjectName>
@@ -67,46 +67,63 @@ const Links = () => {
           </ProjectDescription>
         </ProjectButton>
       </ProjectLinks>
-    ) : (
-      null
-    )}
+    
     </>
   )
 };
 
-export default Links;
+export default Projects;
 
-const LinksDiv = styled.div`
-  display: flex;
-  margin-top: 50px;
-  padding: 0 25%;
-  justify-content: space-around;
+const ProjectsDiv = styled.div`
+  margin-top: 20px;
   margin-bottom: 50px;
+  height: 100px;
+
+  @media(max-width: 600px) {
+    margin: 0;
+    height: 60px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Button = styled.div`
+  margin: auto;
+  margin-top: 20px;
   color: white;
-  width: 250px;
-  height: 46px;
-  background-color: rgba(255, 255, 255, 0.2);
-  font-size: 1.5em;
+  width: fit-content;
+  height: 95px;
+  font-size: 3.5rem;
   font-weight: 500;
-  padding: 5px;
-  box-shadow: 2px 2px 5px grey;
-  border-radius: 2px;  
-
+  padding: 10px;
+  
   &:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
     cursor: pointer;
     overflow: hidden;
+  }
+
+  @media(max-width: 600px) {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    height: 60px;
   }
   
 `;
 
 const ProjectLinks = styled.div`
   display: flex;
-  margin-left: 5%;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+  @media(max-width: 600px) {
+    display: block;
+  }
+
+  @media(max-width: 700px) {
+    margin-bottom: 50px;
+  }
+
+  @media(min-width: 1230px) {
+  }
 
 `;
 
@@ -123,13 +140,12 @@ const ProjectButton = styled.div`
   width: 26%;
   height: 205px;
   background-color: rgba(255, 255, 255, 0.5);
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 700;
   padding: 5px;
   box-shadow: 2px 2px 5px grey;
   border-radius: 10px;
-  margin-bottom: 5%;  
-  margin-left: 5%;
+  margin-bottom: 5%; 
   border: 2px solid lightgrey;
 
   &:hover {
@@ -138,12 +154,32 @@ const ProjectButton = styled.div`
     cursor: pointer;
     overflow: hidden;
   }
+
+  @media(max-width: 600px) {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+
+  @media(min-width: 601px) {
+    width: 30%;
+    font-size: 0.8rem;
+  }
+
+  @media(min-width: 982px) {
+    font-size: 1rem;
+  }
+
+  @media(min-width: 1230px) {
+  
+    width: 25%;
+  }
   
 `;
 
 const FlashcardProjectButton = styled.div`
   font-family: "Bangers";
-  width: 26%;
+  width: 30%;
   height: 205px;
   background-color: rgba(255, 253, 208, 0.5);
   font-size: 1.2rem;
@@ -153,7 +189,6 @@ const FlashcardProjectButton = styled.div`
   box-shadow: 2px 2px 5px grey;
   border-radius: 10px;
   margin-bottom: 5%;  
-  margin-left: 5%;
   border: 2px solid lightgrey;
 
   &:hover {
@@ -162,10 +197,29 @@ const FlashcardProjectButton = styled.div`
     cursor: pointer;
     overflow: hidden;
   }
+
+  @media(max-width: 600px) {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+
+  @media(min-width: 601px) {
+    width: 30%;
+    font-size: 0.95rem;
+  }
+
+  @media(min-width: 1230px) {
+    width: 25%;
+  }
   
 `;
 
 const ProjectDescription = styled.div`
   padding: 10px;
   line-height: 1.4;
+
+  @media(max-width: 700px) {
+    padding: 5px;
+  }
 `;

@@ -15,7 +15,7 @@ const FitNBeGreat = () => {
       
       <MediumTextDiv>an innovative fitness tracking application designed for seamless user experience. Elevate your fitness journey with features tailored for efficiency and ease of use.</MediumTextDiv>
 
-    <Images src={ScreenshotHome} alt="homepage-pic" width="80%" />
+    <PCImage src={ScreenshotHome} alt="homepage-pic" />
 
     <MediumTextDiv>Craft a curated list of bespoke activities, saving you valuable time during workout planning.</MediumTextDiv>
 
@@ -23,21 +23,21 @@ const FitNBeGreat = () => {
 
     <MediumTextDiv>Store and review a comprehensive history of your workouts, allowing for precise progress tracking and strategic refinement of routines.</MediumTextDiv>
 
-    <Images src={ScreenshotActivityList} alt="activity-list-pic" width="25%" />
+    <MobileImage src={ScreenshotActivityList} alt="activity-list-pic" />
 
-    <Images src={ScreenshotWorkout} alt="workout-pic" width="25%" />
+    <MobileImage src={ScreenshotWorkout} alt="workout-pic" />
     
-    <Images src={ScreenshotActivityWorkout} alt="activity-workout-pic" width="25%" />
+    <MobileImage src={ScreenshotActivityWorkout} alt="activity-workout-pic" />
     
     <MediumTextDiv>Navigate effortlessly through our user-friendly interface, and use on your mobile devices thanks to responsive web design.</MediumTextDiv>
 
     <MediumTextDiv>Access an expansive database of exercises, enabling swift searches and streamlined addition to your regimen.</MediumTextDiv>
     
-    <Images src={ScreenshotExerciseSearch} alt="exercise-search-pis" width="80%" />
+    <PCImage src={ScreenshotExerciseSearch} alt="exercise-search-pis" />
 
-    <MediumTextDiv style={{ marginLeft: "17%" }}>Built with:</MediumTextDiv>
+    <MediumTextDiv >Built with:</MediumTextDiv>
     
-    <div style={{ display: "flex", marginLeft: "21%" }}>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <ul>
         <LI>React</LI>
         <LI>Redux Toolkit</LI>
@@ -91,6 +91,14 @@ const FitNBeGreatAnchor = styled.a`
   &:hover {
     color: grey;
   }
+
+  @media (max-width: 700px) {
+    font-size: 3.2rem;
+  }
+
+  @media(max-width: 400px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const LargeTextDiv = styled.div`
@@ -100,7 +108,16 @@ const LargeTextDiv = styled.div`
   font-size: 3rem;
   text-align: left;
   font-family: "Roboto";
-  `;
+
+  @media (max-width: 700px) {
+    font-size: 2.4rem;
+  }
+
+  @media(max-width: 400px) {
+    font-size: 2rem;
+  }
+
+`;
 
   const MediumTextDiv = styled.div`
   width: 85%;
@@ -110,15 +127,40 @@ const LargeTextDiv = styled.div`
   font-size: 1.75rem;
   text-align: left;
   padding: 10px 0px;
+
+  @media (max-width: 700px) {
+    font-size: 1.25rem;
+  }
+
+  @media(max-width: 400px) {
+    font-size: 1rem;
+  }
   
   `;
 
-const Images = styled.img`
+const PCImage = styled.img`
+  border-radius: 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 3px solid #282c34;
+  width: 80%;
+
+  @media(max-width: 700px) {
+    width: 98%;
+  }
+`;
+
+const MobileImage = styled.img`
   border-radius: 10px;
   margin-top: 3%;
   margin-bottom: 3%;
   margin-right: 2.5%;
   border: 3px solid #282c34;
+  width: 25%;
+
+  @media(max-width: 700px) {
+    width: 40%;
+  }
 `;
 
 const LI = styled.li`
@@ -127,4 +169,12 @@ const LI = styled.li`
   font-size: 1.75rem;
   text-align: left;
   margin: 0 10px;
+
+  @media (max-width: 700px) {
+    font-size: 1.25rem;
+  }
+
+  @media(max-width: 400px) {
+    font-size: 1rem;
+  }
 `;

@@ -20,23 +20,21 @@ const NavBar = () => {
       <Row className="justify-content-end">
         {!isHome ? (
           <NavLink>
-            <img onClick={handleHomeClick} src={home} alt="home" height={40} style={{ backgroundColor: "rgba(255, 255, 255, 0.2)", padding: "2px" }} />
+            <Img onClick={handleHomeClick} src={home} alt="home" style={{ padding: "2px" }} />
           </NavLink>
         ) : (
           null
         )}
-        <NavLink>
-          <a href="https://github.com/Will9214" target="_blank" rel="noreferrer" >
-            <img src={gitHub} alt="git-hub" height={40} style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }} />
+        
+          <NavLink href="https://github.com/Will9214" target="_blank" rel="noreferrer" >
+            <Img src={gitHub} alt="git-hub" />
+          </NavLink>
+        
+          <NavLink href="https://www.linkedin.com/in/william-ashley-a4978519b" target="_blank" rel="noreferrer" >
+            <Img src={linkedIn} alt="linked-in" />
 
-          </a>
-        </NavLink>
-        <NavLink>
-          <a href="https://www.linkedin.com/in/william-ashley-a4978519b" target="_blank" rel="noreferrer" >
-            <img src={linkedIn} alt="linked-in"  height={40} style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}/>
+          </NavLink>
 
-          </a>
-        </NavLink>
       </Row>
     </NavBarDiv>
   )
@@ -50,9 +48,13 @@ const NavBarDiv = styled.div`
   color: #066;
   margin: 1.5rem 3rem;
   padding-right: 0;
+
+  @media(max-width: 700px) {
+    margin: 0.6rem 1.5rem;
+  }
 `;
 
-const NavLink = styled.div`
+const NavLink = styled.a`
   width: fit-content;
   padding: 0;
   margin-left: 1rem;
@@ -60,5 +62,14 @@ const NavLink = styled.div`
   &:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.4);
+  }
+`;
+
+const Img = styled.img`
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  @media(max-width: 700px) {
+    height: 30px;
   }
 `;
