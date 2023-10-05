@@ -30,7 +30,7 @@ const NameDiv = styled.div`
     font-size: 3rem;
   }
 
-  @media(max-width: 965px) {
+  @media(max-width: 980px) {
     font-size: 2.6rem;
   }
 
@@ -48,9 +48,9 @@ const NameDiv = styled.div`
   // background-color: #FFD600;
 
 const TitleDiv = styled.div`
-  font-family: ""Space Mono", monospace";
-  font-size: 1.18rem;
-  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0px;
   color: #ffd600;
   margin-bottom: 16px;
 
@@ -58,12 +58,21 @@ const TitleDiv = styled.div`
     font-size: 1rem;
   }
 
-  @media(max-width: 860px) {
+  @media(max-width: 980px) {
     font-size: 0.8rem;
   }
 
+  @media(max-width: 860px) {
+    font-size: 0.7rem;
+  }
+
   @media(max-width: 700px) {
-    font-size: 11px;
+    font-size: 9px;
+    margin-bottom: 8px;
+  }
+
+  @media(max-width: 600px) {
+    font-size: 10px;
     margin-bottom: 8px;
   }
 

@@ -19,7 +19,7 @@ const DisplayElement = styled.div`
   
 
   @media(max-width: 700px) {
-    margin: auto;
+   
     
   }
 `;

@@ -7,9 +7,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to bottom right, #7bafd4, 5%, white);
   /* background-image: url(yellowbillboard.png); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(sand-background.jpg);
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-image: url(sand-background.jpg); */
+  background: linear-gradient(
+    to top right,
+    rgba(40, 44, 52, 1),
+    15%,
+    rgba(212, 124, 137, 1),
+    20%,
+    rgba(40, 44, 52, 1),
+    30%,
+    rgba(147, 112, 216, 1),
+    35%,
+    rgba(40, 44, 52, 1),
+    49%,
+    rgba(97, 218, 251, 1),
+    51%,
+    rgba(40, 44, 52, 1),
+    65%,
+    rgba(147, 112, 216, 1),
+    70%,
+    rgba(40, 44, 52, 1),
+    80%,
+    rgba(212, 124, 137, 1),
+    85%,
+    rgba(40, 44, 52, 1)
+  );
 }
 
 code {

@@ -34,22 +34,9 @@ const FirstProjectContainer = styled.div`
   padding-bottom: 4%;
   padding-top:4%;
   margin-bottom: 4%;
-  background-color: #36323E;
-  background: linear-gradient(
-    to top right,
-    rgba(40, 44, 52, 0.3), 15%,
-    rgba(212, 124, 137, 0.3), 20%,
-    rgba(40, 44, 52, 0.3), 30%,
-    rgba(147, 112, 216, 0.3), 35%,
-    rgba(40, 44, 52, 0.3), 49%,
-    rgba(97, 218, 251, 0.3), 51%,
-    rgba(40, 44, 52, 0.3), 65%,
-    rgba(147, 112, 216, 0.3), 70%,
-    rgba(40, 44, 52, 0.3), 80%,
-    rgba(212, 124, 137, 0.3), 85%,
-    rgba(40, 44, 52, 0.3)
-  );
-  filter: drop-shadow(2px 2px 10px grey);
+  background-color: rgba(54, 50, 63, 0.5);
+  box-shadow: 1px 1px 50px black;
+  border-radius: 2px;
 `;
 
 const FlashcardAnchor = styled.a`
@@ -119,6 +106,7 @@ const PCImage1 = styled.img`
   @media(max-width: 700px) {
     width: 98%;
     border: 3px solid black;
+    margin-right: 0;
   }
 `;
 
@@ -133,6 +121,7 @@ const PCImage2 = styled.img`
   @media(max-width: 700px) {
     width: 98%;
     border: 3px solid black;
+    margin-right: 0;
   }
 
 `;
@@ -148,6 +137,7 @@ const MobileImage = styled.img`
   @media(max-width: 700px) {
     width: 50%;
     border: 3px solid black;
+    margin-right: 0;
   }
 `;
 

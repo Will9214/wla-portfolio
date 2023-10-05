@@ -34,6 +34,7 @@ const DisplayElement = styled.div`
 
   @media(max-width: 600px) {
     display: block;
+    margin-top: 25px;
   }
 `;
 

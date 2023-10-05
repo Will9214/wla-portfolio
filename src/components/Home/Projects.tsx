@@ -49,14 +49,14 @@ const Projects = () => {
           </ProjectDescription>
         </ProjectButton>
 
-        <FlashcardProjectButton onClick={handleFlashcardAppClick}>
-          <ProjectName style={{ fontFamily: "Bangers", background: "#fffdd0", color: "#282c34" }}>
+        <ProjectButton onClick={handleFlashcardAppClick}>
+          <ProjectName>
             Flashcard
           </ProjectName>
           <ProjectDescription style={{ lineHeight: "1.2" }}>
             A simple full stack application to help myself reinforce software engineering topics, terms, and concepts. Built with responsive web design so I can study anywhere I have my phone. 
           </ProjectDescription>
-        </FlashcardProjectButton>
+        </ProjectButton>
 
         <ProjectButton>
           <ProjectName>
